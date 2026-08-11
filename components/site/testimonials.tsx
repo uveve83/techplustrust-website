@@ -28,7 +28,9 @@ export function Testimonials() {
               </blockquote>
               <div className="mt-6 border-t border-border pt-4">
                 <p className="font-semibold">{story.name}</p>
-                <p className="text-sm text-muted-foreground">{story.location}</p>
+                {story.location && (
+                  <p className="text-sm text-muted-foreground">{story.location}</p>
+                )}
                 <p className="mt-2 text-sm font-medium text-success">{story.result}</p>
               </div>
             </Reveal>

@@ -45,7 +45,7 @@ export function FeaturedProducts() {
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((product, i) => (
             <Reveal key={product.model} delay={i * 110}>
-              <ProductCard product={product} />
+              <ProductCard product={product} index={i} />
             </Reveal>
           ))}
         </div>

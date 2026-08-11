@@ -110,6 +110,10 @@ export default function ServicesPage() {
         eyebrow="What We Do"
         title="Services built around the farmer"
         description="From locally made incubators to community hatching stations and hands-on training, we support poultry farmers at every step."
+        image={{
+          src: '/images/real/agra-booth.jpg',
+          alt: 'The TechPlus Trust team supporting visitors at the AGRA exhibition booth',
+        }}
       />
 
       <section className="bg-background py-16 md:py-24">
@@ -147,9 +151,9 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/hatching-station.png"
+                  src="/images/real/product-large.jpg"
                   alt="A community hatching station with rows of solar-powered incubators"
                   fill
                   className="object-cover"

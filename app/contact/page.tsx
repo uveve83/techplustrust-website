@@ -1,6 +1,7 @@
 'use client'
 
 import type { FormEvent } from 'react'
+import Image from 'next/image'
 import { Globe, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { PageHero } from '@/components/site/page-hero'
 import { COMPANY } from '@/lib/site-data'
@@ -19,7 +20,15 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHero eyebrow="Get in touch" title="Let’s hatch your next opportunity" description="Whether you need an incubator, healthy chicks, practical training or a partner for a larger program, our team is ready to listen." />
+      <PageHero
+        eyebrow="Get in touch"
+        title="Let’s hatch your next opportunity"
+        description="Whether you need an incubator, healthy chicks, practical training or a partner for a larger program, our team is ready to listen."
+        image={{
+          src: '/images/real/booth-wheels.jpg',
+          alt: 'The TechPlus Trust team at an exhibition booth with an incubator',
+        }}
+      />
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
@@ -39,6 +48,15 @@ export default function ContactPage() {
               <a href={COMPANY.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center rounded-md border border-border px-3 py-2 text-sm font-semibold text-foreground hover:bg-muted">Instagram</a>
             </div>
             <p className="mt-8 rounded-lg bg-muted p-4 text-sm text-muted-foreground">Business hours: <span className="font-semibold text-foreground">{COMPANY.hours}</span></p>
+            <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/real/farm-coop.jpg"
+                alt="A healthy flock raised with TechPlus Trust incubators and training"
+                fill
+                sizes="(min-width: 1024px) 420px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
           <form onSubmit={handleSubmit} className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
             <div className="grid gap-5 sm:grid-cols-2">

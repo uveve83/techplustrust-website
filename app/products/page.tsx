@@ -7,7 +7,7 @@ import { ProductCard } from '@/components/site/product-card'
 import { CTAButton } from '@/components/site/cta-button'
 import { Faq } from '@/components/site/faq'
 import { CTABand } from '@/components/site/cta-band'
-import { INCUBATORS, UNIVERSAL_FEATURES } from '@/lib/site-data'
+import { INCUBATORS, UNIVERSAL_FEATURES, PRICING_TABLE } from '@/lib/site-data'
 
 export const metadata: Metadata = {
   title: 'Products',
@@ -45,6 +45,10 @@ export default function ProductsPage() {
         eyebrow="Our Products"
         title="Solar-powered incubators and quality poultry inputs"
         description="Designed for Rwanda\u2019s farmers — affordable, durable, and built to scale with your operation."
+        image={{
+          src: '/images/real/workshop-banner.jpg',
+          alt: 'TechPlus Trust incubators being manufactured in the Kamonyi workshop',
+        }}
       />
 
       {/* Comparison table */}
@@ -65,6 +69,7 @@ export default function ProductsPage() {
                 <tr className="bg-primary text-primary-foreground">
                   <th scope="col" className="px-5 py-4 font-semibold">Model</th>
                   <th scope="col" className="px-5 py-4 font-semibold">Capacity</th>
+                  <th scope="col" className="px-5 py-4 font-semibold">Price</th>
                   <th scope="col" className="px-5 py-4 font-semibold">Target User</th>
                   <th scope="col" className="px-5 py-4 font-semibold">Key Features</th>
                   <th scope="col" className="px-5 py-4 font-semibold">Quote</th>
@@ -75,6 +80,7 @@ export default function ProductsPage() {
                   <tr key={p.model} className="align-top">
                     <td className="px-5 py-4 font-bold text-foreground">{p.model}</td>
                     <td className="px-5 py-4 text-muted-foreground">{p.capacity}</td>
+                    <td className="px-5 py-4 font-semibold text-primary">{p.price}</td>
                     <td className="px-5 py-4 text-muted-foreground">{p.target}</td>
                     <td className="px-5 py-4 text-muted-foreground">{p.features.join(', ')}</td>
                     <td className="px-5 py-4">
@@ -87,6 +93,59 @@ export default function ProductsPage() {
               </tbody>
             </table>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Full pricing & specifications */}
+      <section className="bg-muted">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <Reveal>
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
+              Full pricing &amp; specifications
+            </h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Every incubator size we manufacture, from 240 to 40,000 eggs. Power consumption
+              figures are based on international standard commercial incubator efficiency
+              benchmarks.
+            </p>
+          </Reveal>
+
+          <Reveal className="mt-10 overflow-x-auto rounded-xl border border-border">
+            <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+              <thead>
+                <tr className="bg-primary text-primary-foreground">
+                  <th scope="col" className="px-5 py-4 font-semibold">Model</th>
+                  <th scope="col" className="px-5 py-4 font-semibold">Capacity (Eggs)</th>
+                  <th scope="col" className="px-5 py-4 font-semibold">Price (RWF)</th>
+                  <th scope="col" className="px-5 py-4 font-semibold">Power Consumption (kW)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-card">
+                {PRICING_TABLE.map((tier) => (
+                  <tr key={tier.model} className="align-top">
+                    <td className="px-5 py-4 font-bold text-foreground">{tier.model}</td>
+                    <td className="px-5 py-4 text-muted-foreground">
+                      {tier.capacityEggs.toLocaleString('en-US')}
+                    </td>
+                    <td className="px-5 py-4 text-muted-foreground">
+                      {tier.priceRWF.toLocaleString('en-US')}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-primary">
+                      {tier.powerConsumptionKW.toFixed(1)} kW
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Reveal>
+
+          <p className="mt-4 text-sm text-muted-foreground">
+            Don&rsquo;t see the exact size you need, or want help choosing?{' '}
+            <a href="/contact" className="font-semibold text-primary hover:underline">
+              Request a quote
+            </a>{' '}
+            and our team will help you find the right fit.
+          </p>
         </div>
       </section>
 
@@ -122,7 +181,7 @@ export default function ProductsPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {INCUBATORS.map((product, i) => (
               <Reveal key={product.model} delay={i * 90}>
-                <ProductCard product={product} />
+                <ProductCard product={product} index={i} />
               </Reveal>
             ))}
           </div>
@@ -133,10 +192,10 @@ export default function ProductsPage() {
       <section className="bg-muted">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-20 sm:px-6 lg:grid-cols-2">
           <Reveal className="overflow-hidden rounded-2xl border border-border bg-card">
-            <div className="relative aspect-[16/9]">
+            <div className="relative aspect-[4/3]">
               <Image
-                src="/images/chicks.png"
-                alt="Healthy day-old chicks"
+                src="/images/real/hero-showroom.jpg"
+                alt="Trays of fertile eggs inside a TechPlus Trust incubator"
                 fill
                 sizes="(min-width: 1024px) 560px, 100vw"
                 className="object-cover"
@@ -153,17 +212,17 @@ export default function ProductsPage() {
                 temperature-controlled packaging.
               </p>
               <CTAButton href="/contact" variant="secondary" className="mt-6">
-                Order Now
+                Order Fertilized Eggs
                 <ArrowRight className="size-4" />
               </CTAButton>
             </div>
           </Reveal>
 
           <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border bg-card">
-            <div className="relative aspect-[16/9]">
+            <div className="relative aspect-[4/3]">
               <Image
-                src="/images/farmer-portrait.png"
-                alt="A farmer with his flock"
+                src="/images/real/chicks-brooder.jpg"
+                alt="Hundreds of healthy day-old chicks in a TechPlus Trust brooder"
                 fill
                 sizes="(min-width: 1024px) 560px, 100vw"
                 className="object-cover"

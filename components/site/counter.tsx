@@ -46,10 +46,20 @@ export function Counter({
           }
         })
       },
-      { threshold: 0.4 },
+      { threshold: 0.1, rootMargin: '0px 0px -10% 0px' },
     )
     observer.observe(el)
-    return () => observer.disconnect()
+
+    // Safety net: if for any reason the observer never fires (e.g. the
+    // element is already in view before hydration finishes on some
+    // browsers), force the count-up after a short delay so numbers never
+    // get stuck at 0.
+    const fallback = window.setTimeout(run, 1200)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(fallback)
+    }
   }, [value, duration])
 
   return (

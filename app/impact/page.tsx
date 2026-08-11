@@ -15,7 +15,15 @@ export const metadata: Metadata = {
 export default function ImpactPage() {
   return (
     <>
-      <PageHero eyebrow="Our impact" title="Technology that reaches the last mile" description="Every incubator, training session and healthy chick is part of a bigger story: more resilient farms, stronger incomes and better nutrition across Rwanda." />
+      <PageHero
+        eyebrow="Our impact"
+        title="Technology that reaches the last mile"
+        description="Every incubator, training session and healthy chick is part of a bigger story: more resilient farms, stronger incomes and better nutrition across Rwanda."
+        image={{
+          src: '/images/real/ceo-award.jpg',
+          alt: 'TechPlus Trust receiving recognition at the Mastercard Foundation Youth Entrepreneurship event',
+        }}
+      />
 
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -34,7 +42,7 @@ export default function ImpactPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image src="/images/farmer-portrait.png" alt="A Rwandan poultry farmer holding a healthy chick" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="/images/real/farm-wide.jpg" alt="Healthy chickens raised by a TechPlus Trust-supported farmer" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -56,7 +64,7 @@ export default function ImpactPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal className="max-w-2xl"><p className="font-mono text-xs uppercase tracking-widest text-secondary">Farmer voices</p><h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">Progress you can feel on the farm</h2></Reveal>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {SUCCESS_STORIES.map((story, i) => <Reveal key={story.name} delay={i * 80} className="flex h-full flex-col rounded-xl border border-border bg-card p-6"><p className="font-serif text-lg leading-relaxed text-card-foreground">“{story.quote}”</p><div className="mt-6 flex-1"><p className="font-semibold text-foreground">{story.name}</p><p className="text-sm text-muted-foreground">{story.location}</p></div><p className="mt-5 flex items-start gap-2 border-t border-border pt-4 text-sm font-medium text-primary"><ArrowRight className="mt-0.5 size-4 shrink-0" />{story.result}</p></Reveal>)}
+            {SUCCESS_STORIES.map((story, i) => <Reveal key={story.name} delay={i * 80} className="flex h-full flex-col rounded-xl border border-border bg-card p-6"><p className="font-serif text-lg leading-relaxed text-card-foreground">“{story.quote}”</p><div className="mt-6 flex-1"><p className="font-semibold text-foreground">{story.name}</p>{story.location && <p className="text-sm text-muted-foreground">{story.location}</p>}</div><p className="mt-5 flex items-start gap-2 border-t border-border pt-4 text-sm font-medium text-primary"><ArrowRight className="mt-0.5 size-4 shrink-0" />{story.result}</p></Reveal>)}
           </div>
         </div>
       </section>

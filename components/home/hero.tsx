@@ -1,18 +1,19 @@
-import Image from 'next/image'
 import { ArrowRight, MessageCircle, PlayCircle } from 'lucide-react'
 import { CTAButton } from '@/components/site/cta-button'
+import { HeroSlideshow } from '@/components/home/hero-slideshow'
+
+const HERO_SLIDES = [
+  { src: '/images/real/farm-exterior.jpg', alt: 'A TechPlus Trust decentralized hatching station in rural Rwanda' },
+  { src: '/images/real/booth-solo.jpg', alt: 'A TechPlus Trust team member with an incubator at a partner exhibition' },
+  { src: '/images/real/agra-booth.jpg', alt: 'The TechPlus Trust team engaging visitors at the AGRA exhibition booth' },
+  { src: '/images/real/ceo-award.jpg', alt: 'TechPlus Trust receiving recognition at the Mastercard Foundation Youth Entrepreneurship event' },
+  { src: '/images/real/stage-presentation.jpg', alt: 'TechPlus Trust presenting on stage at an agricultural technology conference' },
+]
 
 export function Hero() {
   return (
     <section className="relative isolate min-h-[600px] overflow-hidden lg:min-h-[680px]">
-      <Image
-        src="/images/hero-farmer.png"
-        alt="A Rwandan farmer holding day-old chicks beside a solar-powered incubator"
-        fill
-        priority
-        sizes="100vw"
-        className="animate-ken-burns object-cover"
-      />
+      <HeroSlideshow slides={HERO_SLIDES} />
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/20"

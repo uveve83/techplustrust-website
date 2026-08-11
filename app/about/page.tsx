@@ -50,6 +50,10 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="Building an ecosystem of sustainable poultry farming"
         description="TechPlus Trust Ltd was born from a simple observation: rural farmers in Rwanda have the passion and potential to transform their communities through poultry farming — but they lack access to affordable, reliable technology."
+        image={{
+          src: '/images/real/booth-wheels.jpg',
+          alt: 'The TechPlus Trust team with an incubator at a partner exhibition',
+        }}
       />
 
       {/* Our Story */}
@@ -82,8 +86,8 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={120} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src="/images/workshop.png"
-              alt="Technicians assembling solar-powered incubators in a Rwandan workshop"
+              src="/images/real/workshop-banner.jpg"
+              alt="TechPlus Trust incubators assembled in the Kamonyi workshop"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
               className="object-cover"
