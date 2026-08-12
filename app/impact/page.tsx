@@ -42,7 +42,7 @@ export default function ImpactPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image src="/images/real/farm-wide.jpg" alt="Healthy chickens raised by a TechPlus Trust-supported farmer" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="/images/real/showroom-banner.jpg" alt="TechPlus Trust incubators on display with the company's services banner" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
           </Reveal>
           <Reveal delay={120}>
