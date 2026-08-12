@@ -50,8 +50,8 @@ export default function ContactPage() {
             <p className="mt-8 rounded-lg bg-muted p-4 text-sm text-muted-foreground">Business hours: <span className="font-semibold text-foreground">{COMPANY.hours}</span></p>
             <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
-                src="/images/real/farm-coop.jpg"
-                alt="A healthy flock raised with TechPlus Trust incubators and training"
+                src="/images/real/showroom-banner.jpg"
+                alt="TechPlus Trust incubators on display with the company's services banner"
                 fill
                 sizes="(min-width: 1024px) 420px, 100vw"
                 className="object-cover"
