@@ -5,7 +5,7 @@ export const COMPANY = {
   email: 'techplustrust@gmail.com',
   phone: '+250 786 812 474',
   phoneHref: '+250786812474',
-  website: 'www.techplustrust.com',
+  website: 'www.techplustrust.rw',
   whatsapp: 'https://wa.me/250786812474',
   linkedin: 'https://www.linkedin.com/company/techplus-trust-ltd',
   x: 'https://x.com/Techplustrustrw',
