@@ -12,7 +12,7 @@ import { INCUBATORS, UNIVERSAL_FEATURES, PRICING_TABLE } from '@/lib/site-data'
 export const metadata: Metadata = {
   title: 'Products',
   description:
-    'Solar-powered egg incubators from 240 to 40,000 egg capacity, plus fertilized eggs and healthy day-old chicks — designed for Rwanda\u2019s farmers.',
+    'Solar-powered egg incubators from 240 to 40,000 egg capacity, plus fertilized eggs and healthy day-old chicks — designed for Rwanda’s farmers.',
 }
 
 const PRODUCT_FAQS = [
@@ -34,7 +34,7 @@ const PRODUCT_FAQS = [
   {
     question: 'How do I know which model is right for me?',
     answer:
-      'Choose based on your flock ambitions: TPT-240 suits smallholders, mid-range models fit emerging farmers and small cooperatives, and the TPT-40000 serves large cooperatives and NGOs. Request a quote and we\u2019ll advise.',
+      'Choose based on your flock ambitions: TPT-240 suits smallholders, mid-range models fit emerging farmers and small cooperatives, and the TPT-40000 serves large cooperatives and NGOs. Request a quote and we’ll advise.',
   },
 ]
 
@@ -44,7 +44,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Our Products"
         title="Solar-powered incubators and quality poultry inputs"
-        description="Designed for Rwanda\u2019s farmers — affordable, durable, and built to scale with your operation."
+        description="Designed for Rwanda’s farmers — affordable, durable, and built to scale with your operation."
         image={{
           src: '/images/real/workshop-banner.jpg',
           alt: 'TechPlus Trust incubators being manufactured in the Kamonyi workshop',

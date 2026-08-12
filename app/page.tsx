@@ -103,7 +103,7 @@ export default function HomePage() {
               },
               {
                 tag: 'Farmer Story',
-                title: 'How a Nyagatare cooperative doubled its output',
+                title: 'How Rwankuba cooperative in Karongi doubled its output',
                 excerpt:
                   'How one cooperative used decentralized hatching to double production in 12 months.',
               },

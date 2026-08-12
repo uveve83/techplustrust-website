@@ -22,7 +22,7 @@ const PILLARS = [
   {
     icon: Cpu,
     title: 'Innovative Incubators',
-    text: 'Affordable, solar-powered incubators built locally for Rwanda\u2019s conditions.',
+    text: 'Affordable, solar-powered incubators built locally for Rwanda’s conditions.',
   },
   {
     icon: MapPin,
