@@ -4,7 +4,7 @@ import { HeroSlideshow } from '@/components/home/hero-slideshow'
 
 const HERO_SLIDES = [
   { src: '/images/real/farm-exterior.jpg', alt: 'A TechPlus Trust decentralized hatching station in rural Rwanda' },
-  { src: '/images/real/booth-solo.jpg', alt: 'A TechPlus Trust team member with an incubator at a partner exhibition' },
+  { src: '/images/real/booth-solo.jpg', alt: 'A TechPlus Trust team member with an incubator at a partner exhibition', fit: 'contain' as const },
   { src: '/images/real/agra-booth.jpg', alt: 'The TechPlus Trust team engaging visitors at the AGRA exhibition booth' },
   { src: '/images/real/ceo-award.jpg', alt: 'TechPlus Trust receiving recognition at the Mastercard Foundation Youth Entrepreneurship event' },
   { src: '/images/real/stage-presentation.jpg', alt: 'TechPlus Trust presenting on stage at an agricultural technology conference' },
