@@ -38,19 +38,8 @@ export default function HomePage() {
 
       {/* Leadership / conference recognition */}
       <section className="bg-muted">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2">
-          <Reveal className="overflow-hidden rounded-2xl border border-border">
-            <div className="relative aspect-[3/2]">
-              <Image
-                src="/images/real/ceo-presenting.jpg"
-                alt="TechPlus Trust's founder presenting at #ACAT2025, the African Conference on Agricultural Technologies"
-                fill
-                sizes="(min-width: 1024px) 560px, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <Reveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">
               Recognized on the Regional Stage
             </p>
@@ -64,8 +53,22 @@ export default function HomePage() {
               Foundation, and AGRA, sharing how decentralized, solar-powered hatching is
               reaching smallholder farmers across the country.
             </p>
-            <div className="mt-6 overflow-hidden rounded-xl border border-border">
-              <div className="relative aspect-[3/2]">
+          </Reveal>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <Reveal className="overflow-hidden rounded-2xl border border-border">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/images/real/ceo-presenting.jpg"
+                  alt="TechPlus Trust's founder presenting at #ACAT2025, the African Conference on Agricultural Technologies"
+                  fill
+                  sizes="(min-width: 1024px) 480px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border">
+              <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/real/ceo-award.jpg"
                   alt="TechPlus Trust's founder with partners at a Mastercard Foundation youth entrepreneurship event"
@@ -74,8 +77,8 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
