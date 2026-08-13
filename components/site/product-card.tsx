@@ -10,6 +10,7 @@ const PRODUCT_IMAGES = [
   '/images/real/product-large.jpg',
   '/images/real/hero-showroom.jpg',
   '/images/real/product-industrial.jpg',
+  '/images/real/product-mid.jpg',
 ]
 
 export function ProductCard({ product, index = 0 }: { product: Incubator; index?: number }) {
